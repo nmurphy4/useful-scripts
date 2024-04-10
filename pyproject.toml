@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "useful-scripts"
+version = "0.1.0"
+description = ""
+authors = [
+    "Nick Murphy <nmurphy@liveintent.com>",
+    "Kacper Bielecki <kbielecki@liveintent.com>",
+    "Jens Rasmussen <jrasmussen@liveintent.com>",
+    "Hakim Jonas Ghoula <hghoula@liveintent.com>",
+    "Dennis Bruhn <dbruhn@liveintent.com>",
+    "Ali Etminan <aetminan@liveintent.com>",
+    "Michael Perry <mperry@liveintent.com>" 
+]
+
+readme = "README.md"
+packages = [{include = "useful_scripts"}]
+
+[[tool.poetry.source]]
+name = "jfrog"
+url = "https://liveintent.jfrog.io/liveintent/api/pypi/pypi/simple"
+priority = "primary"
+
+
+[tool.poetry.dependencies]
+python = ">3.9,<3.12"
+postprocessing = ">=3.1177.0"
+li-airflow-dags = ">=2.2654"
+
+
+[tool.poetry.dev-dependencies]
+black = ">=23.12.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
